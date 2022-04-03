@@ -1,4 +1,4 @@
-from compare_alt_branches import comparators
+from utils import comparators
 
 test_data_1 = {
     ('a1', 'b1'): '0.1.0',

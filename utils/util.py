@@ -1,6 +1,6 @@
 import requests
 
-SERVER_ADRESS = "https://rdb.altlinux.org/api"
+SERVER_ADDRESS = "https://rdb.altlinux.org/api"
 
 
 def get_branch_bin(branch):
@@ -13,7 +13,7 @@ def get_branch_bin(branch):
     :rtype: list
     """
     try:
-        response = requests.get(SERVER_ADRESS + "/export/branch_binary_packages/{}".format(branch))
+        response = requests.get(SERVER_ADDRESS + "/export/branch_binary_packages/{}".format(branch))
         response.raise_for_status()
     except requests.exceptions.HTTPError as err:
         raise SystemExit(err)

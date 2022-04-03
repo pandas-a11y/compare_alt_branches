@@ -1,23 +1,23 @@
-from compare_alt_branches import util
-from compare_alt_branches import comparators
+from utils import util
+from utils import comparators
 import json
 
-BRANCHES = ['sisyphus', 'p10']
 
-
-def branch_compare_full_to_json(pkg_comp_full):
+def branch_compare_full_to_json(pkg_comp_full, branches_list):
     """
     Outputs results of branch comparisons to JSON format.
 
     :param pkg_comp_full: A tuple of dictionaries with comparison results
     :type pkg_comp_full: list
+    :param branches_list: A list of branches being compared
+    :type branches_list: list
     :return: Comparison results as a JSON object
     :rtype: `JSON` object
     """
 
-    comp_out = ["only_in_" + BRANCHES[1],
-                "only_in_" + BRANCHES[0],
-                "version_higher_in_" + BRANCHES[0]
+    comp_out = ["only_in_" + branches_list[1],
+                "only_in_" + branches_list[0],
+                "version_higher_in_" + branches_list[0]
                 ]
 
     data_array = []
@@ -32,7 +32,7 @@ def branch_compare_full_to_json(pkg_comp_full):
     return json_obj
 
 
-def branch_request_bin(branches_list=BRANCHES):
+def branch_request_bin(branches_list):
     """
     Retrieves package binaries for two ALTRepo branches. Outputs a list with binaries.
 

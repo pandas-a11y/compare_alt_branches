@@ -1,4 +1,4 @@
-from compare_alt_branches import util
+from utils import util
 import pytest
 import requests
 
