@@ -2,6 +2,7 @@ from compare_alt_branches import util
 import pytest
 import requests
 
+
 @pytest.mark.xfail(raises=requests.exceptions.HTTPError)
 def test_get_branch_bin():
     with pytest.raises(SystemExit):

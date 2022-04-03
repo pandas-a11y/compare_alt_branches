@@ -1,9 +1,10 @@
 import pkg_resources as p_res
 
+
 def pkg_compare_diff(dict_has_pkg, dict_lacks_pkg):
     """
     Outputs unmatched packages that are present in the 1st package dictionary,
-    but not present in the 2nd package dictionary
+    but not present in the 2nd package dictionary.
 
     :param dict_has_pkg: Point of comparison package dictionary
     :type dict_has_pkg: dict

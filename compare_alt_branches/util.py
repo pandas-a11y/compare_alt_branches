@@ -1,5 +1,7 @@
 import requests
 
+SERVER_ADRESS = "https://rdb.altlinux.org/api"
+
 
 def get_branch_bin(branch):
     """
@@ -11,7 +13,7 @@ def get_branch_bin(branch):
     :rtype: list
     """
     try:
-        response = requests.get("https://rdb.altlinux.org/api/export/branch_binary_packages/{}".format(branch))
+        response = requests.get(SERVER_ADRESS + "/export/branch_binary_packages/{}".format(branch))
         response.raise_for_status()
     except requests.exceptions.HTTPError as err:
         raise SystemExit(err)
@@ -27,7 +29,7 @@ def pkg_to_dict(branch_pkg_list):
 
     key: tuple('architecture', 'package-name'),
 
-    val: 'package version'
+    val: 'package version'.
 
     :param branch_pkg_list: List of packages in the branch
     :type branch_pkg_list: list
