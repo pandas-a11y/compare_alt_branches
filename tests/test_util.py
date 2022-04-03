@@ -1,6 +1,6 @@
+from compare_alt_branches import util
 import pytest
 import requests
-from compare_alt_branches import util
 
 @pytest.mark.xfail(raises=requests.exceptions.HTTPError)
 def test_get_branch_bin():

@@ -22,7 +22,7 @@ def get_branch_bin(branch):
 
 def pkg_to_dict(branch_pkg_list):
     """
-    Utility function for the 'comparators' module, takes a list of
+    Utility function for the 'compare_aux' module, takes a list of
     packages of one branch, converts it into a dictionary such that:
 
     key: tuple('architecture', 'package-name'),
