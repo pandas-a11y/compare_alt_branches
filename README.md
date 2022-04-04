@@ -1,4 +1,4 @@
-##Compare ALT branches
+## Compare ALT branches
 This library compares binary packages for ALT Linux distributions 'sisyphus' and 'p10'.  
 Comparison is made for all available architectures.
 
@@ -27,7 +27,7 @@ A mock example of a resulting structure:
 {"type": "version_higher_in_sisyphus", "packages": [{"arch": "ppc64le", "name": "qtscriptgenerator", "version": "0.2.0"}]}
 ]
 ```
-##Use
+## Use
 When using the library in a python script it is recommended to only use the main module, and the function `comp()` that
 returns the JSON structure on the request. By default, the utility compares branches *'sisyphus'* and *'p10'*,
 but it's possible to compare custom branches. To do so, call the `comp()` function with branch names passed as a comma-separated string:
